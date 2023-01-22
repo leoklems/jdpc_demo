@@ -99,6 +99,8 @@ textarea {
     grid-template-columns: repeat(6, 1fr);
     padding: 25px;
     align-items: center;
+    position: fixed;
+    width: 100%;
 }
 
 #hm__header__logo__link {
@@ -116,6 +118,17 @@ textarea {
 
 #main__logo__name {
     font-family: 'out';
+}
+
+#hm__header__dail {
+    grid-column: 4/6;
+    grid-row: 1/2;
+    background-color: var(--primary);
+    border-radius: 5px;
+    color: var(--dates);
+    padding: 2px;
+    width: fit-content;
+    z-index: 3;
 }
 
 #hm__nav {
@@ -173,6 +186,7 @@ textarea {
     gap: 25px;
     grid-template-columns: 1fr;
     padding: 0 25px;
+    margin-top: 90px;
 }
 
 #hm__body__sec__body {
@@ -241,6 +255,7 @@ textarea {
 
 #hm__body__caro__img {
     width: 100%;
+    aspect-ratio: 1.7;
     border-bottom-left-radius: 25px;
     border-top-right-radius: 25px;
 }
@@ -257,6 +272,7 @@ textarea {
 }
 
 #hm__body__w__w__do,
+#hm__body__success__stories,
 #hm__body__about__us {
     display: grid;
     gap: 10px;
@@ -271,14 +287,16 @@ textarea {
 }
 
 #w__w__do__head,
-#hm__body__about__us__header {
+#hm__body__about__us__header,
+#hm__body__success__stories__header {
     text-transform: uppercase;
     font-weight: 600;
     font-family: 'Acens';
 }
 
 .w__w__do__item__name,
-.about__us__item__head {
+.about__us__item__head,
+.success__stories__item__head {
     text-transform: capitalize;
     font-weight: 600;
     width: fit-content;
@@ -314,6 +332,38 @@ textarea {
 .w__w__do__item__desc {
     grid-column: 1/3;
     grid-row: 2/3;
+}
+
+#hm__body__success__stories__body {
+    display: grid;
+    overflow-x: auto;
+    width: calc(100% - 50px);
+    margin: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    /* grid-template-columns: 1fr 1fr;
+    /* gap: 10px 2px;
+    border-radius: 3px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    align-items: center; */
+}
+
+.hm__body__success__stories__item {
+    display: grid;
+    gap: 5px;
+    grid-row: 1/1;
+    width: 50vw;
+    scroll-snap-align: start;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5fr;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+.success__stories__img {
+    width: 100%;
 }
 
 #hm__body__out__team__contact {
@@ -455,8 +505,11 @@ textarea {
         grid-template-columns: 1fr 5fr;
         align-items: center;
     }
+    #hm__header__dail {
+        grid-column: 2/3;
+    }
     #hm__nav {
-        grid-column: 2/7;
+        grid-column: 3/7;
         position: unset;
         padding: 100px 30px;
         width: 100vw;
@@ -473,6 +526,7 @@ textarea {
         grid-template-columns: repeat(6, 1fr);
         align-items: center;
         justify-items: center;
+        font-size: 0.8em;
     }
     #hm__nav {
         padding: unset;
@@ -506,6 +560,9 @@ textarea {
     }
     .w__w__do__item__div:last-child {
         border-right: unset;
+    }
+    .hm__body__success__stories__item {
+        width: 35vw;
     }
     #hm__body__about__us {
         padding: 15px 0 15px;
@@ -547,6 +604,9 @@ textarea {
     }
     #hm__body__w__w__do {
         padding: 100px 0 60px;
+    }
+    .hm__body__success__stories__item {
+        width: 30vw;
     }
     #hm__body__about__us {
         padding: 60px 0 60px;
